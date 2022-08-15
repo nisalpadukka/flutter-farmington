@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+
+//FXRate widget
 class FxRateWidget extends StatefulWidget {
   const FxRateWidget({super.key});
 
@@ -43,6 +45,7 @@ class _FxRateWidgetState extends State<FxRateWidget> {
   }
 }
 
+//loading view
 Widget LoadingFxRateBox() {
   return Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
     Container(

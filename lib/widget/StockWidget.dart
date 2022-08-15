@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+
+//Stock widget with image
 class StockWidget extends StatefulWidget {
   const StockWidget({super.key});
 
@@ -43,7 +45,7 @@ class _StockModelState extends State<StockWidget> {
   }
 }
 
-
+//processing view
 Widget LoadingStockBox() {
   return Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
     Container(

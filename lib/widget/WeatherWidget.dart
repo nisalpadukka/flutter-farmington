@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:farmington/model/WeatherModel.dart';
 import 'dart:convert';
 
+//This is the weather widget
 class WeatherWidget extends StatefulWidget {
   const WeatherWidget({super.key});
 
@@ -17,9 +18,9 @@ class _WeatherWidgetState extends State<WeatherWidget> {
 
   @override
   void initState() {
-    getCurrentWeather();
+    fetchWeather();
     Timer.periodic(
-        const Duration(seconds: 300), (timer) => getCurrentWeather());
+        const Duration(seconds: 300), (timer) => fetchWeather());
     super.initState();
   }
 
@@ -38,11 +39,12 @@ class _WeatherWidgetState extends State<WeatherWidget> {
           return LoadingWeatherBox();
         }
       },
-      future: getCurrentWeather(),
+      future: fetchWeather(),
     );
   }
 }
 
+//Shows processing box if not loaded yet
 Widget LoadingWeatherBox() {
   return Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
     Container(
@@ -62,6 +64,7 @@ Widget LoadingWeatherBox() {
   ]);
 }
 
+//Weather widget with image
 Widget weatherBox(WeatherModel _weather) {
   return Container(
     margin: const EdgeInsets.all(12.0),
@@ -108,7 +111,7 @@ Widget weatherBox(WeatherModel _weather) {
   );
 }
 
-Future getCurrentWeather() async {
+Future fetchWeather() async {
   late WeatherModel weather;
   var url =
       "https://api.openweathermap.org/data/2.5/weather?q=barrie&units=metric&appid=c36ffcd6dbd3d32e3deb52499600743c";

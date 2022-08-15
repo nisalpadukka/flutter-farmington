@@ -1,3 +1,4 @@
+//Data source object for stock info widget
 class StockModel {
   final double price;
   final String time;

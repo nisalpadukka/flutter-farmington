@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import 'LoginScreen.dart';
 
+//Home page screen
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -68,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     logout(context);
                   }),
+              //Adding 3 widgets
               const WeatherWidget(),
               const StockWidget(),
               const FxRateWidget()

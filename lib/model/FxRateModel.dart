@@ -1,3 +1,4 @@
+//Data source object for fx Rate widget
 class FxRateModel {
   final double rate;
   final String time;

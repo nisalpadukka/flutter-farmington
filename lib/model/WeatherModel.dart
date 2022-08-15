@@ -1,3 +1,4 @@
+//Data source object for weather widget
 class WeatherModel {
   final double temp;
   WeatherModel(

@@ -1,3 +1,4 @@
+//User info data structure
 class UserModel {
   String? uid;
   String? email;
